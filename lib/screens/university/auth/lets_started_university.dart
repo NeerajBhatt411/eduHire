@@ -1,4 +1,5 @@
 import 'package:eduhire/screens/university/auth/university_login.dart';
+import 'package:eduhire/screens/university/auth/university_register.dart';
 import 'package:eduhire/screens/utils/responsive_util.dart';
 import 'package:eduhire/widget/primary_button.dart';
 import 'package:flutter/material.dart';
@@ -27,6 +28,7 @@ class LetsStartedUniversity extends StatelessWidget {
             },backgroundColor: AppColors.lightGrey,textColor: AppColors.black,),
             SizedBox(height: ResponsiveUtil.screenHeight(context, 24),),
             PrimaryButton(text: "Register", onTap: () {
+              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => UniversityRegister(),));
 
             },)
 

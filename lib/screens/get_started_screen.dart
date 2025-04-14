@@ -22,12 +22,12 @@ class GetStartedScreen extends StatelessWidget {
               SizedBox(height: ResponsiveUtil.screenHeight(context, 30),),
               Center(child: Text("Welcome To EduHire!",style: TextStyle(fontSize: FontSizes.title,fontFamily: "Montserrat",fontWeight:FontWeight.w700,),)),
               SizedBox(height: ResponsiveUtil.screenHeight(context, 10),),
-              Text("Join the largest network of educators in India. Find your next teaching opportunity today!",textAlign: TextAlign.center,style: TextStyle(fontSize:FontSizes.subtitle, fontFamily: Fontfamily.fontFamily,fontWeight:Fontfamily.regular,color: AppColors.subtitleColor),),
+              Center(child: Text("Join the largest network of educators in India. Find your next teaching opportunity today!",textAlign: TextAlign.center,style: TextStyle(fontSize:FontSizes.subtitle, fontFamily: Fontfamily.fontFamily,fontWeight:Fontfamily.regular,color: AppColors.subtitleColor),)),
               SizedBox(height: ResponsiveUtil.screenHeight(context, 110),),
               PrimaryButton(text: "Get Started", onTap: () {
               Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Identity(),));
               },)
-        
+
             ],
           ),
         ),
