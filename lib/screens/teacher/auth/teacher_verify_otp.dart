@@ -1,18 +1,17 @@
-import 'package:eduhire/screens/utils/constants.dart';
-import 'package:eduhire/screens/utils/responsive_util.dart';
-import 'package:eduhire/widget/primary_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 
-class UniversityVerifyOTP extends StatefulWidget {
-  const UniversityVerifyOTP({super.key});
+import '../../../widget/primary_button.dart';
+import '../../utils/constants.dart';
+import '../../utils/responsive_util.dart';
+class TeacherVerifyOtp extends StatefulWidget {
+  const TeacherVerifyOtp({super.key});
 
   @override
-  State<UniversityVerifyOTP> createState() => _UniversityVerifyOTPState();
+  State<TeacherVerifyOtp> createState() => _TeacherVerifyOtpState();
 }
 
-class _UniversityVerifyOTPState extends State<UniversityVerifyOTP> {
-  // TextEditingController emailController = TextEditingController();
+class _TeacherVerifyOtpState extends State<TeacherVerifyOtp> {
   String enteredOtp = '';
 
   List<TextStyle?> createOtpTextStyles(BuildContext context) {
@@ -41,9 +40,6 @@ class _UniversityVerifyOTPState extends State<UniversityVerifyOTP> {
       );
     }).toList();
   }
-
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -90,10 +86,10 @@ class _UniversityVerifyOTPState extends State<UniversityVerifyOTP> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                    Center(child: Text(AppText.didNotReceive,style: TextStyle(fontWeight: Fontfamily.regular,fontFamily: Fontfamily.fontFamily,fontSize: 14,color: AppColors.darkGrey ),)),
-                    SizedBox(width: ResponsiveUtil.screenWidth(context, 4),),
-                    Center(child: Text(AppText.resendCode,style: TextStyle(fontWeight: Fontfamily.semiBold,fontFamily: Fontfamily.fontFamily, fontSize: 14, color: AppColors.primary),))
-                  ],),
+                      Center(child: Text(AppText.didNotReceive,style: TextStyle(fontWeight: Fontfamily.regular,fontFamily: Fontfamily.fontFamily,fontSize: 14,color: AppColors.darkGrey ),)),
+                      SizedBox(width: ResponsiveUtil.screenWidth(context, 4),),
+                      Center(child: Text(AppText.resendCode,style: TextStyle(fontWeight: Fontfamily.semiBold,fontFamily: Fontfamily.fontFamily, fontSize: 14, color: AppColors.primary),))
+                    ],),
                 ),
               ),
               SizedBox(height: ResponsiveUtil.screenHeight(context, 260),),

@@ -1,3 +1,4 @@
+import 'package:eduhire/screens/teacher/auth/lets_started_teacher.dart';
 import 'package:eduhire/screens/university/auth/lets_started_university.dart';
 import 'package:eduhire/screens/utils/constants.dart';
 import 'package:eduhire/widget/primary_button.dart';
@@ -35,7 +36,9 @@ class Identity extends StatelessWidget {
             SizedBox(height: ResponsiveUtil.screenHeight(context, 20),),
             
             PrimaryButton(text: "I am a Teacher", onTap: () {
-            
+              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => LetsStartedTeacher(),));
+
+
             },)
             
             

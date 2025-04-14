@@ -1,19 +1,19 @@
-import 'package:eduhire/screens/university/auth/university_forgot_password.dart';
-import 'package:eduhire/screens/university/auth/university_register.dart';
-import 'package:eduhire/screens/utils/constants.dart';
-import 'package:eduhire/screens/utils/responsive_util.dart';
-import 'package:eduhire/widget/custom_text_form_field.dart';
-import 'package:eduhire/widget/primary_button.dart';
+import 'package:eduhire/screens/teacher/auth/teacher_forgot_password.dart';
+import 'package:eduhire/screens/teacher/auth/teacher_register.dart';
 import 'package:flutter/material.dart';
 
-class UniversityLogin extends StatefulWidget {
-  const UniversityLogin({super.key});
+import '../../../widget/custom_text_form_field.dart';
+import '../../../widget/primary_button.dart';
+import '../../utils/constants.dart';
+import '../../utils/responsive_util.dart';
+class TeacherLogin extends StatefulWidget {
+  const TeacherLogin({super.key});
 
   @override
-  State<UniversityLogin> createState() => _UniversityLoginState();
+  State<TeacherLogin> createState() => _TeacherLoginState();
 }
 
-class _UniversityLoginState extends State<UniversityLogin> {
+class _TeacherLoginState extends State<TeacherLogin> {
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
 
@@ -22,7 +22,6 @@ class _UniversityLoginState extends State<UniversityLogin> {
     passwordController.dispose();
     super.dispose();
   }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -90,10 +89,10 @@ class _UniversityLoginState extends State<UniversityLogin> {
                   SizedBox(height: ResponsiveUtil.screenHeight(context, 16)),
                   GestureDetector(
                     onTap: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => UniversityForgotPassword(),));
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => TeacherForgotPassword(),));
                     },
                     child: Align(
-                      alignment: Alignment.centerRight,
+                        alignment: Alignment.centerRight,
                         child: Text(AppText.forgotPassword,style: TextStyle(color: AppColors.softGrey),)),
                   )
                 ],
@@ -107,9 +106,9 @@ class _UniversityLoginState extends State<UniversityLogin> {
             },),
             SizedBox(height: ResponsiveUtil.screenHeight(context, 24)),
             GestureDetector(
-              onTap: () {
-                Navigator.push(context,MaterialPageRoute(builder: (context) => UniversityRegister(),));
-              },
+                onTap: () {
+                  Navigator.push(context,MaterialPageRoute(builder: (context) => TeacherRegister(),));
+                },
                 child: Center(child: Text("Create a new accouunt",style: TextStyle(color: AppColors.primary,fontFamily: Fontfamily.fontFamily,fontWeight: Fontfamily.medium),)))
 
 

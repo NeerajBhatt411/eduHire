@@ -1,20 +1,19 @@
-import 'package:eduhire/screens/university/auth/university_%20verify_otp.dart';
-import 'package:eduhire/screens/university/auth/university_forgot_password.dart';
-import 'package:eduhire/screens/university/auth/university_login.dart';
-import 'package:eduhire/widget/primary_button.dart';
+import 'package:eduhire/screens/teacher/auth/teacher_login.dart';
+import 'package:eduhire/screens/teacher/auth/teacher_verify_otp.dart';
 import 'package:flutter/material.dart';
 
 import '../../../widget/custom_text_form_field.dart';
+import '../../../widget/primary_button.dart';
 import '../../utils/constants.dart';
 import '../../utils/responsive_util.dart';
-class UniversityRegister extends StatefulWidget {
-  const UniversityRegister({super.key});
+class TeacherRegister extends StatefulWidget {
+  const TeacherRegister({super.key});
 
   @override
-  State<UniversityRegister> createState() => _UniversityRegisterState();
+  State<TeacherRegister> createState() => _TeacherRegisterState();
 }
 
-class _UniversityRegisterState extends State<UniversityRegister> {
+class _TeacherRegisterState extends State<TeacherRegister> {
   TextEditingController nameController = TextEditingController();
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
@@ -24,10 +23,9 @@ class _UniversityRegisterState extends State<UniversityRegister> {
     passwordController.dispose();
     super.dispose();
   }
-
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: SingleChildScrollView(
+    return Scaffold(body:  SingleChildScrollView(
       child: Column(
         children: [
           SizedBox(
@@ -90,40 +88,40 @@ class _UniversityRegisterState extends State<UniversityRegister> {
                       color: AppColors.black, fontWeight: Fontfamily.medium),
                 ),
                 SizedBox(height: ResponsiveUtil.screenHeight(context, 8)),
-      
+
                 CustomTextFormField(
                   controller: passwordController,
                   text: "Password",
                   prefixIcon: Icons.lock_outline,
                   isPassword: true,
                 ),
-      
+
               ],
-      
+
             ),
-      
+
           ),
           SizedBox(height: ResponsiveUtil.screenHeight(context, 32)),
           PrimaryButton(text: "Sign Up", onTap: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context) => UniversityVerifyOTP(),));
-      
+            Navigator.push(context, MaterialPageRoute(builder: (context) => TeacherVerifyOtp(),));
+
           },),
           SizedBox(height: ResponsiveUtil.screenHeight(context, 24)),
           GestureDetector(
             onTap: () {
-              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => UniversityLogin(),));
+              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => TeacherLogin(),));
             },
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-              Center(child: Text("Already have an account?",style: TextStyle(fontFamily: Fontfamily.fontFamily,fontWeight: Fontfamily.medium,color: AppColors.softGrey))),
+                Center(child: Text("Already have an account?",style: TextStyle(fontFamily: Fontfamily.fontFamily,fontWeight: Fontfamily.medium,color: AppColors.softGrey))),
                 SizedBox(width: ResponsiveUtil.screenWidth(context, 5),),
                 Text("Sign in ",style: TextStyle(fontFamily: Fontfamily.fontFamily,fontWeight: Fontfamily.medium,color: AppColors.primary),)
-            ],),
+              ],),
           )
-      
-      
-      
+
+
+
         ],
       ),
     ),);
