@@ -4,6 +4,7 @@ class AppColors {
 
 
   //colors
+  static const Color cardLightBlue = Color(0xFFCCEAFF);
   static const Color white = Colors.white;
   static const Color black = Color(0xff212529);
   static const Color grey = Colors.grey;

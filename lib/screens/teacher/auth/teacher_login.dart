@@ -1,5 +1,7 @@
 import 'package:eduhire/screens/teacher/auth/teacher_forgot_password.dart';
 import 'package:eduhire/screens/teacher/auth/teacher_register.dart';
+import 'package:eduhire/screens/teacher/teacher_bottom_navigation_bar.dart';
+import 'package:eduhire/screens/teacher/teacher_home_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../../widget/custom_text_form_field.dart';
@@ -102,6 +104,7 @@ class _TeacherLoginState extends State<TeacherLogin> {
             ),
             SizedBox(height: ResponsiveUtil.screenHeight(context, 32)),
             PrimaryButton(text: "Login", onTap: () {
+              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => TeacherBottomNavigationBar(),));
 
             },),
             SizedBox(height: ResponsiveUtil.screenHeight(context, 24)),
@@ -109,7 +112,7 @@ class _TeacherLoginState extends State<TeacherLogin> {
                 onTap: () {
                   Navigator.push(context,MaterialPageRoute(builder: (context) => TeacherRegister(),));
                 },
-                child: Center(child: Text("Create a new accouunt",style: TextStyle(color: AppColors.primary,fontFamily: Fontfamily.fontFamily,fontWeight: Fontfamily.medium),)))
+                child: Center(child: Text("Create a new account",style: TextStyle(color: AppColors.primary,fontFamily: Fontfamily.fontFamily,fontWeight: Fontfamily.medium),)))
 
 
           ],
